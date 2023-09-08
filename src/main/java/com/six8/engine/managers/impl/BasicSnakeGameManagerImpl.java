@@ -174,7 +174,7 @@ public class BasicSnakeGameManagerImpl implements GameManager {
         }
     }
 
-    private void infiniteMove() {
+    private synchronized void infiniteMove() {
         this.gameState = GameState.IN_PLAY;
         while (!this.isGameOver() && !this.isGamePaused()) {
             this.moveSnake();
@@ -187,8 +187,8 @@ public class BasicSnakeGameManagerImpl implements GameManager {
         }
         if (this.isGameOver()) {
             this.gameState = GameState.OVER;
+            this.moveUpdateListener.onGameOver();
         }
-        this.moveUpdateListener.onGameOver();
     }
 
     @Override

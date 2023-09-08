@@ -88,10 +88,8 @@ public class GamePlay implements KeyListener, ActionListener, FocusListener, Mov
     @Override
     public void keyPressed(KeyEvent keyEvent) {
         this.consoleOutputManager.showMessage("keyPressed keyCode: " + keyEvent.getKeyCode());
-        switch (keyEvent.getKeyCode()) {
-            case 16:
-                this.shiftDown = true;
-                break;
+        if (keyEvent.getKeyCode() == 16) {
+            this.shiftDown = true;
         }
     }
 
