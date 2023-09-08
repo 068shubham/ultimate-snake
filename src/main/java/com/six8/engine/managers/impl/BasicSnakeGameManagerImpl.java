@@ -1,10 +1,9 @@
 package com.six8.engine.managers.impl;
 
-import com.six8.GamePlay;
+import com.six8.common.GridItem;
+import com.six8.engine.enums.Direction;
 import com.six8.engine.enums.GameState;
 import com.six8.engine.listeners.MoveUpdateListener;
-import com.six8.engine.enums.Direction;
-import com.six8.common.GridItem;
 import com.six8.engine.managers.GameManager;
 import com.six8.engine.models.Position;
 
